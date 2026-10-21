@@ -1,6 +1,6 @@
-# EasyGerber
+# EasyGerber: AI PCB design, layout, and routing
 
-EasyGerber connects Kilo to hosted PCB design tools: search published parts, create and revise a schematic, request placement and routing, inspect a preview, check the saved layout, and export manufacturing files and the editable EasyGerber file. Layout, routing, and scoring run on EasyGerber's servers.
+This entry connects Kilo to EasyGerber's hosted board-design tools. Layout, routing, and scoring run on EasyGerber's servers.
 
 ## Setup
 
@@ -27,7 +27,7 @@ Confirm the connection exposes EasyGerber tools, including `search_parts`, `get_
 
 Ask Kilo:
 
-> Create a small 3.3 V LED indicator board using published EasyGerber catalog parts: a power connector, a current-limiting resistor, and an LED. Preserve their catalog identities, footprints, and available 3D models. Use app-supported board settings, generate the layout, inspect the saved-layout checks, show a preview, and export the manufacturing ZIP and editable EasyGerber file.
+> Use EasyGerber to make a passive signal-and-ground pass-through board with two published two-pin connectors. Confirm their catalog pins, use the app's supported defaults, generate the layout, show the preview, check for blocking issues, and export the manufacturing ZIP and editable EasyGerber file. Do not place an order.
 
 For a new board, the agent starts a guest session directly with `start_guest_session`, or reuses the task's existing session or authorized account. It searches and inspects catalog parts before creating the schematic, lets the service hydrate hidden routing constraints, and follows the live tool schemas for creation, generation, previews, checks, and exports. Generation is asynchronous; wait for the returned operation before inspecting its result. Successful generation is not an electrical or manufacturing safety certification.
 

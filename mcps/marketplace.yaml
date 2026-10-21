@@ -1339,18 +1339,15 @@ items:
         placeholder: your_e2b_api_key
   - id: easygerber
     name: EasyGerber
-    description: Design printed circuit boards with published catalog parts, server-side placement and routing, previews,
-      layout checks, and manufacturing exports. Start one guest board without an account, or connect an EasyGerber
-      account.
-    author: EasyGerber Inc.
+    description: AI PCB design, layout, and routing
+    author: EasyGerber
     url: https://github.com/EasyGerber/easygerber-agent-plugin
     category: development
     tags:
       - development
     prerequisites:
-      - Internet access to EasyGerber's hosted MCP service
-      - No EasyGerber account or API key is needed to start a guest board
-      - An EasyGerber account and OAuth consent are required for saved account boards
+      - No EasyGerber account, OAuth grant, or API key is needed to connect, initialize, or discover tools.
+      - Saved account boards require EasyGerber OAuth consent.
     content:
       - name: Remote
         content: |
